@@ -1,14 +1,14 @@
 import os
 import webbrowser
 
-# Path to our folder that contains your app
+# Path to the folder that contains your apps
 path = str("/Users/kasper/Sites/")
 projectFolders = list(os.listdir(path))
 
-# Loop trough foldes
+# Loop through folders
 i = 0
 while i < len(projectFolders):
-    # Prints which index folder are.
+    # Prints folder name and index
     print projectFolders[i] + "[",i , "]"
     i += 1
 
@@ -20,5 +20,5 @@ os.system("mysql.server start")
 webbrowser.open('http://127.0.0.1:8000')
 # Opens Atom
 os.system("atom " + path + projectFolders[int(choice)])
-# Navigate to folder which user choices. and run php artisan serve
+# Navigate to folder, run php artisan serve
 os.system( "cd " + path + projectFolders[int(choice)] + " && php artisan serve" )
