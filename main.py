@@ -20,5 +20,5 @@ os.system("mysql.server start")
 webbrowser.open('http://127.0.0.1:8000')
 # Opens Atom
 os.system("atom " + path + projectFolders[int(choice)])
-# Navigate to folder which user choices. and Run php artisan serve
+# Navigate to folder which user choices. and run php artisan serve
 os.system( "cd " + path + projectFolders[int(choice)] + " && php artisan serve" )
